@@ -23,7 +23,6 @@ def work(fork_count: int):
 
         if child_pid != 0:
             sys.stdout.write(f"Parent[{os.getpid()}]: Child with PID {child_pid} terminated. Exit Status {exit_code}.\n")
-            print('Parent[', os.getpid(), ']: Child with PID', child_pid, 'terminated. Exit Status', exit_code, '.')
             processes.remove(child_pid)
 
             if exit_code != 0:
